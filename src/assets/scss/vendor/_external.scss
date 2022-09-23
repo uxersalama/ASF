@@ -1,0 +1,21 @@
+.lblcommenterror {
+   color: #c01a1a;
+}
+
+
+.subcriteria-box.error .sub-weight, .criteria-wrap.error{ border:1px solid #c01a1a;}
+	
+	.criteria-total-error, .criteria-grand-total-error{ color: #c01a1a; font-size: 0.8em; display:none;}
+	.subcriteria-box.error .criteria-total-error, .criteria-wrap.error .criteria-grand-total-error { display:block;}
+	
+.editbox{
+	float: left;
+    margin-right: 10px;
+    margin-left: 10px;
+    font-size: 28px;	
+}
+
+.rank-up, .rank-down{
+    padding: 7px !important;
+    padding-top: 8px!important;
+}

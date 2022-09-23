@@ -1,0 +1,226 @@
+
+
+@import "../modules/vars";
+
+.header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.top-bar {
+    background: $red;
+    height: 42px;
+
+    .container {
+        height: 100%;
+        position: relative;
+
+        .login-container {
+            float: $right;
+
+            .login-item {
+                display: block;
+                line-height: 42px;
+                color: #fff;
+                padding: 0 20px;
+                position: relative;
+                text-decoration: none;
+                cursor: pointer;
+                float: left;
+                overflow: hidden;
+                transition: all 0.25s ease;
+                font-size: 16px;
+
+                & > .fa {
+                    margin-right: 5px;
+                }
+
+                &.register {
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        width: 1px;
+                        height: 21px;
+                        background: #db4f4f;
+                        right: 0;
+                        top: 10px;
+                    }
+
+                    &:hover:before {
+                        display: none;
+                    }
+
+                    &:after {
+                        left: 100%;
+                    }
+                }
+
+                &:after {
+                    content: '';
+                    height: 2px;
+                    width: 100%;
+                    transition: all 0.25s ease;
+                    background: #fff;
+                    position: absolute;
+                    left: -100%;
+                    bottom: 0;
+                }
+
+                &:hover {
+                    background: $redhover;
+
+                    &:after {
+                        left: 0;
+                    }
+                }
+
+                &.active {
+                    &.login {
+                        overflow: visible;
+                        z-index: 3;
+                    }
+
+                    background: #fff;
+                    color: $red;
+
+                    &:before, &:after {
+                        display: none;
+                    }
+
+                    .login-drop {
+                        visibility: visible;
+
+                        .login-drop-inner {
+                            top: 0;
+                        }
+                    }
+
+                    & ~ .pop-overlay {
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+            }
+
+            .pop-overlay {
+                position: fixed;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                background: rgba(0,0,0,.7);
+                z-index: 2;
+                visibility: hidden;
+                opacity: 0;
+            }
+
+            .popup {
+                max-width: 480px;
+                width: 90%;
+                color: $black;
+                
+            }
+        }
+
+        .location-container {
+            float: $left;
+
+            .location-select {
+                height: 42px;
+                position: relative;
+                padding-right: 30px;
+                cursor: pointer;
+                width: 90px;
+                transition: all 0.25s ease;
+                background: $redhover;
+                padding-left: 5px;
+
+                &:before {
+                    content: "\f107";
+                    display: inline-block;
+                    font: normal normal normal 14px/1 FontAwesome;
+                    position: absolute;
+                    right: 5px;
+                    color: #e49090;
+                    font-size: 20px;
+                    top: 10px;
+                }
+
+                .location-select-item {
+                    height: 100%;
+                    padding-top: 10px;
+
+                    img {
+                        margin-right: 8px;
+                    }
+                }
+
+                .location-select-drop {
+                    overflow: hidden;
+                    position: absolute;
+                    left: 0;
+                    top: 100%;
+                    visibility: hidden;
+
+                    .location-select-inner {
+                        background: #fff;
+                        width: 90px;
+                        color: $red;
+                        transition: all 0.25s ease;
+                        top: -100px;
+                        position: relative;
+
+                        .item {
+                            padding: 10px 5px;
+
+                            img {
+                                margin-right: 8px;
+                            }
+
+                            &:hover {
+                                background: #ffeeee;
+                            }
+                        }
+                    }
+                }
+
+                &:hover {
+                    color: $red;
+                    background: #fff;
+
+                    .location-select-drop {
+                        visibility: visible;
+                    }
+
+                    .location-select-inner {
+                        top: 0;
+                    }
+                }
+            }
+        }
+
+        .login-drop {
+            position: absolute;
+            right: 0;
+            line-height: normal;
+            visibility: hidden;
+            overflow: hidden;
+
+            .login-drop-inner {
+                background: #fff;
+                color: red;
+                padding: 40px 20px;
+                padding-bottom: 10px;
+                -webkit-transition: all 200ms cubic-bezier(0.215, 0.61, 0.355, 1) 0ms;
+                -moz-transition: all 200ms cubic-bezier(0.215, 0.61, 0.355, 1) 0ms;
+                transition: all 200ms cubic-bezier(0.215, 0.61, 0.355, 1) 0ms;
+                top: -150px;
+                position: relative;
+                cursor: default;
+            }
+        }
+    }
+}

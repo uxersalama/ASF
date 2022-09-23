@@ -1,0 +1,44 @@
+@import "vars";
+
+@media only screen and (max-width: 1366px) {
+    .container {
+        max-width: 970px;
+    }
+
+    section.section .home-logo {
+        margin-top: 70px;
+        margin-bottom: 40px;
+    }
+
+    section.section .selections-along {
+        margin-bottom: 60px;
+    }
+
+    .category-section h4 {
+        font-size: 24px;
+    }
+
+    .category-item span {
+        font-size: 16px;
+        height: 50px;
+    }
+
+    .bar-slider .slide-item {
+        font-size: 16px;
+        /*padding: 0;*/
+    }
+
+    .sub-categories div {
+        font-size: 14px;
+        cursor: pointer;
+        height: 36px;
+        line-height: 36px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .top-bar .container .login-container .login-item {
+        padding: 0 5px;
+        font-size: 12px;
+    }
+}

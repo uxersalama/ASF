@@ -1,0 +1,44 @@
+//----------------------------------*\
+// SCSS MIXINS
+//----------------------------------*/
+
+@import "mixins/_position.scss";
+
+//----------------------------------*\
+// CONFIG MODULES
+//----------------------------------*/
+
+// Config modules
+@import "modules/_vars.scss";
+@import "modules/_fonts.scss";
+@import "modules/_clearfix.scss";
+@import "modules/_defaults.scss";
+@import "modules/_normalize.scss";
+
+//----------------------------------*\
+// PARTIALS
+//----------------------------------*/
+
+@import "partials/_header.scss";
+@import "partials/_section.scss";
+@import "partials/_footer.scss";
+
+//----------------------------------*\
+// OBJECTS & MODULES
+//----------------------------------*/
+
+@import "modules/navigation";
+@import "modules/inner_page";
+@import "modules/reponsive";
+
+@import "style";
+// Enhancement modules
+
+/*@import "modules/_breakpoints.scss";
+@import "modules/_print.scss";*/
+
+//----------------------------------*\
+// VENDOR
+//----------------------------------*/
+
+/*@import "vendor/_external.scss";*/
